@@ -8,7 +8,14 @@
 </head>
 <body>
 
+	<% flash.each do |type, message| %>
+	<div class="alert flash <%= type %>">
+		<%= message %>
+	</div>
+	<% end %>
+<%= link_to 'the list', todo_lists_path %>
 <%= yield %>
 
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 </body>
 </html>
