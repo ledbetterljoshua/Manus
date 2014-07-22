@@ -1,0 +1,5 @@
+<h1>Add to <%= @todo_list.title %></h1>
+<%= form_for [@todo_list, @todo_item] do |form| %>
+	<%= render partial: form %>
+<% end %>
+	
