@@ -1,29 +1,22 @@
-<h1>Listing todo_lists</h1>
+<h1>The list</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+    <thead>
     <% @todo_lists.each do |todo_list| %>
       <tr id="<%= dom_id(todo_list) %>">
-        <td><%= todo_list.title %></td>
-        <td><%= todo_list.description %></td>
+        <span class="left">
+        <h3><th><%= todo_list.title %></th></h3><br >
+        <th><%= todo_list.description %></th>
         <td>
-
+        </thead> <br />
         <%= link_to "List Items", todo_list_todo_items_path(todo_list) %>
         <%= link_to 'Show', todo_list %>
         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </span>
       </tr>
     <% end %>
-  </tbody>
-</table>
+
 
 <br>
 
