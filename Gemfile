@@ -12,6 +12,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 
+gem 'foundation-rails', '~> 5.3.1'
+
+group :development do
+	gem 'spring'
+	gem 'quiet_assets', '~> 1.0.3'
+end 
+
+
 group :doc do 
 	gem 'sdoc', require: false
 end       
