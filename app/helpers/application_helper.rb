@@ -1,4 +1,8 @@
 module ApplicationHelper
+	def title(title)
+		content_for(:title) { "#{title} | " }
+	end
+
 	def new_item_link
 		if @todo_list && !@todo_list.new_record?
 			text = "Todo Item"
