@@ -1,5 +1,4 @@
-<% title "Editing #{@todo_list.title}" %>
-<h1>Edit - <%= @todo_list.title %></h1>
+<%= title "Editing #{@todo_list.title}" %>
 <%= form_for [@todo_list, @todo_item] do |form| %>
 	<%= render partial: form %>
 <% end %>
