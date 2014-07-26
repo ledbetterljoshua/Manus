@@ -14,18 +14,40 @@
 @media only screen and (min-width: 40.063em) {
 
 	.hero {
-		background: url(asset_path("home-iphone.png")) no-repeat 90% center;
-		background-size: 400px;
-		height: 350px;
+		background: url(asset_path("home-iphone.jpg")) no-repeat 90%;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+		height: 600px;
+	    background-attachment: fixed;
+	    background-position: 0, 0, 0, 100px;
+	    width:100%;
 		text-align: left;
 		h2 {
 			font-size: 1.5rem;
 		}
 	}
+		.home-right h2 {
+			text-align: left;
+		}
+			.home-right .button {
+			position: center;
+		}
+
 }
 
 @media only screen and (min-width: 64.063em) {
 	.hero h2 {
 		font-size: 2.2rem;
+		color:#FEE;
 	}
+			.home-right {
+			position: absolute;
+			right: -200px;
+		}
+			.home-right .button {
+			position: absolute;
+			right: 0px;
+		}
 } 

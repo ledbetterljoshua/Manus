@@ -26,6 +26,11 @@
 @import 'partials/todo_lists';
 @import 'partials/todo_items';
 
+.thin {
+	height: 20px;
+	line-height: 3px;
+
+}
 
 .flash.error {
 	background-color: #f04124;
@@ -45,9 +50,12 @@
 .global-footer {
 	margin-top:20px;
 	font-size:  0.88em;
+	padding-bottom: 20px;
 }
 
-
+footer {
+	padding-bottom: 20px;
+}
 
 
 

@@ -17,8 +17,7 @@
     <% end %> 
   </div>
   <div class="small-4 columns">
-  <%= link_to edit_todo_list_path(@todo_list), 
-    class: "button expand radius outline", data: { "reveal-id" => "email-modal"} do %>
+  <%= link_to edit_todo_list_path(@todo_list), class: "button expand radius outline", data: { "reveal-id" => "email-modal"} do %>
     <span class="fa fa-envelope-o"></span>
     Email
   <% end %> 
@@ -43,7 +42,7 @@
          <%= link_to "Complete", complete_todo_list_todo_item_path(@todo_list, todo_item), method: :patch, class: "icon-check unchecked hide-text" %>
         <% end %> 
       </div>
-      <div class="small-10 medium-11 columns truncate todo-content"
+      <div class="small-9 medium-10 columns truncate todo-content"
       title="<%= todo_item.content %>">
       <%= link_to todo_item.content, edit_todo_list_todo_item_path(@todo_list, todo_item) %>
       </div>
@@ -53,3 +52,14 @@
 
 
 
+
+
+<div id="email-modal" class="reveal-modal tiny" data-reveal>
+  <a class="close-reveal-modal">&#215;</a>
+  <%= form_tag email_todo_list_path(@todo_list), method: :put do %>
+  <%= label_tag :destination, "What email would you like to send this to?" %>
+  <%= text_field_tag :destination %>
+  <br />
+  <%= submit_tag "Send List", class: "button redius medium expand submit" %>
+  <% end %>  
+</div>
