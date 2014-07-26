@@ -32,6 +32,7 @@
 
 </div>
 
+<% if @todo_list.todo_items.size > 0 %>
   <ul class="list todo-items no-bullet">
   <% @todo_list.todo_items.each do |todo_item| %>
     <li id="<%= dom_id(todo_item) %>" class="todo-item row">
@@ -49,6 +50,14 @@
   </li>
   <% end %>
   </ul> 
+  <% else %>
+    <div class="row blank-slate">
+      <div class="small-12 small-centered columns">
+         <p>You dont have anything to do!</p>
+         <%= link_to "Add an item here", new_todo_list_todo_item_path(@todo_list), class: "button radius" %>
+    </div>
+  </div>
+  <% end %> 
 
 
 
