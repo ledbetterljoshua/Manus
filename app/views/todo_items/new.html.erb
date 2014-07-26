@@ -1,4 +1,4 @@
-<h1>Add to <%= @todo_list.title %></h1>
+<%= title "What needs to be done?" %>
 <%= form_for [@todo_list, @todo_item] do |form| %>
 	<%= render partial: form %>
 <% end %>

@@ -19,6 +19,7 @@
 @import 'modules/helpers';
 @import 'partials/icons';
 @import 'partials/header';
+@import 'partials/forms';
 @import 'partials/lists';
 @import 'partials/todo_lists';
 @import 'partials/todo_items';
@@ -77,6 +78,11 @@ div.nav ul li a:hover {
 
 .text-centered {
 	text-align:center;
+}
+
+.global-footer {
+	margin-top:20px;
+	font-size:  0.88em;
 }
 
 
