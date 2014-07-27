@@ -24,6 +24,8 @@ module Odot
     config.action_mailer_preview_path = "#{Rails.root}/spec/mailers/mailer_previews"
     config.assets.precompile += %w( vendor/modernizr.js )
     config.action_view.field_error_proc = Proc.new {|html, instance| html }
+    # required for heroku
+    config.assets.initialize_on_precompile = false
     
   end
 end
