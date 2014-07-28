@@ -25,3 +25,62 @@
 .header-icon {
 	margin-top:20px;
 }
+
+.right-header {
+	position: absolute;
+	top:34px;
+	right: 0px;
+
+}
+
+.left-header {
+	position: absolute;
+	top:34px;
+	left:-100px;
+	z-index: 99;
+
+}
+
+.pipe {
+	color:#Fb4;
+	padding: 10px;
+}
+
+
+@media only screen and (max-width: 640px) {
+
+	.right-header {
+ display: none;
+
+}
+
+.left-header {
+ display: none;
+
+}
+
+.pipe {
+ display: none;
+}
+
+#aboutthecreator, h5 {
+	display: none;
+}
+#why_manus, h5 {
+	display: none;
+}
+
+}
+@media only screen and (max-width: 1205px) {
+
+
+.left-header {
+	left:0px;
+
+}
+
+
+}
+
+
+
