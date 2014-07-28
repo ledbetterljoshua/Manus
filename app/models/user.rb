@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 	end
 
 	def create_default_lists
-		tutorial todo_lists.find_or_create_by(title: "Manus Tutorial")
+		tutorial = todo_lists.find_or_create_by(title: "Manus Tutorial")
 		tutorial.todo_items.find_or_create_by(content: "Add a list or task by clicking on the \"+\" button at the top." )
 		tutorial.todo_items.find_or_create_by(content: "The numbers next to the lists indicate how many tasks they have.")
 		tutorial.todo_items.find_or_create_by(content: "Clicking or tapping on the list takes you to its' tasks. ")
